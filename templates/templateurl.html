@@ -1,0 +1,22 @@
+<style>
+
+</style>
+<div class="slider">
+    <div class="wrap">
+        <div   class = "slide" ng-repeat="image in images" ng-show="image.visible">
+
+            <img ng-src="img/{{image.img}}" ng-hide="checked" />
+            <div class="info">
+                <div class="title">{{image.title}}</div>
+                <div class="description">{{image.description}}</div>
+                <div class="check-element animate-hide note" ng-show="checked"    >{{image.note}}</div>
+                <div  ng-show="!checked" class="show-box box"><input type="checkbox"  ng-model="checked">show details</div>
+                <div ng-show="checked" class="hide-box box"><input type="checkbox"  ng-model="checked" >hide details</div>
+            </div>
+
+        </div>
+        <div class="pagination">
+            <a href="#" class="prev" ng-click="prev()"><span>Prev</span></a> <a class="next" href="#" ng-click="next()"><span>Next</span></a><a class="find-store" href="#"><span> Find A store</span></a>
+        </div>
+    </div>
+</div>
